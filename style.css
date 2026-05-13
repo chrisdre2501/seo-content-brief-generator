@@ -1,0 +1,155 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 24px;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  background: white;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46,125,50,0.1);
+}
+
+small {
+  color: #aaa;
+  font-size: 11px;
+  margin-top: 4px;
+  display: block;
+}
+
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+#loading {
+  margin-top: 20px;
+  color: #2e7d32;
+  font-size: 15px;
+  font-style: italic;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+#output {
+  margin-top: 30px;
+  border-top: 2px solid #f0f0f0;
+  padding-top: 24px;
+}
+
+#output h2 {
+  font-size: 18px;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+}
+
+.field-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2e7d32;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+.output-field {
+  background: #f8f9fb;
+  border: 1px solid #e8eaf0;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  color: #333;
+}
+
+.research-field {
+  background: #f1f8f1;
+  border: 1px solid #2e7d32;
+  color: #1a1a2e;
+  font-size: 13px;
+  font-style: italic;
+}
+
+#output button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  background: #1f5f8d;
+  letter-spacing: 0.03em;
+}
+
+#output button:hover {
+  background: #174d74;
+}

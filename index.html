@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SEO Content Brief Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SEO Content Brief Generator</h1>
+    <p class="subtitle">Powered by Claude API + Live Web Research</p>
+
+    <div class="form-group">
+      <label>Target Keyword</label>
+      <input type="text" id="keyword" placeholder="e.g. Sideshow collectibles buying guide">
+    </div>
+
+    <div class="form-group">
+      <label>Industry or Niche</label>
+      <input type="text" id="industry" placeholder="e.g. Collectibles, SaaS, Health & Wellness">
+    </div>
+
+    <div class="form-group">
+      <label>Content Goal</label>
+      <select id="goal">
+        <option>Drive organic search traffic</option>
+        <option>Generate leads</option>
+        <option>Build brand authority</option>
+        <option>Educate existing customers</option>
+        <option>Support a product launch</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Content Type</label>
+      <select id="type">
+        <option>Blog post / Article</option>
+        <option>Landing page</option>
+        <option>Product comparison</option>
+        <option>How-to guide</option>
+        <option>Listicle</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Your Claude API Key</label>
+      <input type="password" id="apikey" placeholder="sk-ant-...">
+      <small>Stays in your browser only — never sent anywhere except Anthropic.</small>
+    </div>
+
+    <button id="generate" onclick="generateBrief()">Generate SEO Brief</button>
+
+    <div id="loading" class="hidden">⟳ Researching keyword and competitors...</div>
+
+    <div id="output" class="hidden">
+      <h2>Your SEO Content Brief</h2>
+
+      <div class="field-label">🔍 Research Summary</div>
+      <div id="research" class="output-field research-field"></div>
+
+      <div class="field-label">🎯 Search Intent</div>
+      <div id="intent" class="output-field"></div>
+
+      <div class="field-label">👥 Target Audience</div>
+      <div id="audience" class="output-field"></div>
+
+      <div class="field-label">📝 Recommended Title / H1</div>
+      <div id="title" class="output-field"></div>
+
+      <div class="field-label">📣 Meta Description</div>
+      <div id="meta" class="output-field"></div>
+
+      <div class="field-label">🗂️ H2 Structure</div>
+      <div id="h2s" class="output-field"></div>
+
+      <div class="field-label">💡 Content Angle</div>
+      <div id="angle" class="output-field"></div>
+
+      <div class="field-label">🔗 Internal Link Suggestions</div>
+      <div id="links" class="output-field"></div>
+
+      <div class="field-label">📏 Estimated Word Count</div>
+      <div id="wordcount" class="output-field"></div>
+
+      <button onclick="copyAll()">Copy Full Brief to Clipboard</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
